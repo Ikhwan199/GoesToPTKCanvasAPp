@@ -1,0 +1,92 @@
+Materi As screen:
+    Fill: =RGBA(153, 207, 236, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label2_5 As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =117
+        Size: =40
+        Text: ="MATERI"
+        Width: =1365
+        ZIndex: =1
+
+    "Gallery4_1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver4.0'":
+        Height: =398
+        Items: =Kedinasan
+        Layout: =Layout.Vertical
+        OnSelect: =Set(varDocumentCurrent,GetPDFDocumentAsDataURI.Run(Gallery4_1.Selected.Identifier).result)
+        TemplatePadding: =0
+        TemplateSize: =Min(128, Self.Height - 60)
+        Width: =530
+        X: =20
+        Y: =156
+        ZIndex: =2
+
+        Image15_1 As image:
+            Height: =96
+            Image: =ThisItem.Thumbnail.Large
+            OnSelect: =Select(Parent)
+            Width: =96
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title10_1 As label:
+            Align: =Align.Center
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =30
+            Text: =ThisItem.'File name with extension'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image15_1.Width - 104
+            X: =123
+            Y: =40
+            ZIndex: =2
+
+        NextArrow7_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Lihat detail item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator7_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =varDocumentCurrent
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =618
+        ShowControls: =true
+        Width: =750
+        X: =615
+        Y: =117
+        ZIndex: =3
+
+    leftnavuser_7 As leftnavuser:
+        Height: =705
+        Width: =285
+        Y: =60
+        ZIndex: =4
+

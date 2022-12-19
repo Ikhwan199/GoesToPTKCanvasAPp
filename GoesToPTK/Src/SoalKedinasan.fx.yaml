@@ -1,0 +1,66 @@
+SoalKedinasan As screen:
+    BackgroundImage: =
+    Fill: =RGBA(204, 231, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    ImagePosition: =ImagePosition.Stretch
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label2 As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =117
+        Size: =40
+        Text: ="Latihan Soal Kedinasan"
+        Width: =1365
+        ZIndex: =1
+
+    Button3 As button:
+        Fill: =RGBA(0, 121, 187, 1)
+        Height: =132
+        OnSelect: |-
+            =Launch("https://forms.office.com/r/JDm1C41LDT")
+        Size: =30
+        Text: ="TWK"
+        Width: =307
+        X: =63
+        Y: =169
+        ZIndex: =2
+
+    Image1 As image:
+        Height: =768
+        Image: ='3375424504'
+        Width: =834
+        X: =531
+        ZIndex: =3
+
+    Button3_1 As button:
+        Fill: =RGBA(0, 121, 187, 1)
+        Height: =124
+        OnSelect: |-
+            =Launch("https://forms.office.com/r/eDaVyBYH45")
+        Size: =30
+        Text: ="TIU"
+        Width: =307
+        X: =63
+        Y: =372
+        ZIndex: =4
+
+    Button3_2 As button:
+        Fill: =RGBA(0, 121, 187, 1)
+        Height: =106
+        OnSelect: |-
+            =Launch("https://forms.office.com/r/5Frg9WXwTe")
+        Size: =30
+        Text: ="TKP"
+        Width: =291
+        X: =63
+        Y: =568
+        ZIndex: =5
+
+    leftnavuser_4 As leftnavuser:
+        Height: =704
+        Width: =222
+        Y: =64
+        ZIndex: =6
+

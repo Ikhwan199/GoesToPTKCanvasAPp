@@ -1,0 +1,490 @@
+TambahPeserta As screen:
+
+    Form2 As form:
+        DataSource: =user_logins
+        Height: =612
+        Item: =selecteditem//Defaults(user_logins)
+        NumberOfColumns: =2
+        Width: =1362
+        Y: =120
+        ZIndex: =3
+
+        "'Hak Akses_DataCard3' As typedDataCard.allowedValuesStringEditCard":
+            AllowedValues: =DataSourceInfo([@user_logins], DataSourceInfo.AllowedValues, "HakAkses")
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="HakAkses"
+            Default: =ThisItem.HakAkses
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"HakAkses")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DdHak.Selected.Value
+            Width: =681
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            lblHak As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DdHak As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Items: =["user","admin"]
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblHak.Y + lblHak.Height + 5
+                ZIndex: =2
+
+            ErrorMessage17 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DdHak.Y + DdHak.Height
+                ZIndex: =3
+
+            StarVisible17 As label:
+                Align: =Align.Center
+                Height: =lblHak.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblHak.Y
+                ZIndex: =4
+
+        J_kelamin_DataCard3 As typedDataCard.allowedValuesStringEditCard:
+            AllowedValues: =DataSourceInfo([@user_logins], DataSourceInfo.AllowedValues, "J_kelamin")
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="J_kelamin"
+            Default: =ThisItem.J_kelamin
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"J_kelamin")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DdJenisKelamin.Selected.Value
+            Width: =681
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            lblJenisKelamin As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Jenis Kelamin"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DdJenisKelamin As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Items: =["laki-Laki","Perempuan"]
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblJenisKelamin.Y + lblJenisKelamin.Height + 5
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DdJenisKelamin.Y + DdJenisKelamin.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =lblJenisKelamin.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblJenisKelamin.Y
+                ZIndex: =4
+
+        Username_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@user_logins], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =txtUsername.Text
+            Width: =681
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            lblusername As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Username"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            txtUsername As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblusername.Y + lblusername.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =txtUsername.Y + txtUsername.Height
+                ZIndex: =3
+
+        Password_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Password"
+            Default: =ThisItem.Password
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"Password")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@user_logins], DataSourceInfo.MaxLength, "Password")
+            Required: =false
+            Update: =txtPassword.Text
+            Width: =681
+            X: =1
+            Y: =0
+            ZIndex: =2
+
+            lblPassword As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            txtPassword As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.Password
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblPassword.Y + lblPassword.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =txtPassword.Y + txtPassword.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =lblPassword.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblPassword.Y
+                ZIndex: =4
+
+        Nama_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Nama"
+            Default: =ThisItem.Nama
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"Nama")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@user_logins], DataSourceInfo.MaxLength, "Nama")
+            Required: =false
+            Update: =txtNama.Text
+            Width: =681
+            X: =1
+            Y: =1
+            ZIndex: =2
+
+            lblNama As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            txtNama As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblNama.Y + lblNama.Height + 5
+                ZIndex: =2
+
+            ErrorMessage11 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =txtNama.Y + txtNama.Height
+                ZIndex: =3
+
+            StarVisible11 As label:
+                Align: =Align.Center
+                Height: =lblNama.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblNama.Y
+                ZIndex: =4
+
+        Tmpt_lhr_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TempatLahir"
+            Default: =ThisItem.Tmpt_lhr
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"TempatLahir")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@user_logins], DataSourceInfo.MaxLength, "TempatLahir")
+            Required: =false
+            Update: =txtTempatLhr.Text
+            Width: =681
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            lblTempatLhr As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Tempat Lahir"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            txtTempatLhr As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblTempatLhr.Y + lblTempatLhr.Height + 5
+                ZIndex: =2
+
+            ErrorMessage12 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =txtTempatLhr.Y + txtTempatLhr.Height
+                ZIndex: =3
+
+            StarVisible12 As label:
+                Align: =Align.Center
+                Height: =lblTempatLhr.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblTempatLhr.Y
+                ZIndex: =4
+
+        Tgl_lhr_DataCard2 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Tgl_lhr"
+            Default: =ThisItem.Tgl_lhr
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@user_logins],DataSourceInfo.DisplayName,"Tgl_lhr")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DateTgl.SelectedDate
+            Width: =681
+            X: =1
+            Y: =2
+            ZIndex: =2
+
+            lblTgl As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Tanggal Lahir"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DateTgl As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =lblTgl.Y + lblTgl.Height + 5
+                ZIndex: =2
+
+            ErrorMessage13 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DateTgl.Y + DateTgl.Height
+                ZIndex: =3
+
+            StarVisible13 As label:
+                Align: =Align.Center
+                Height: =lblTgl.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =lblTgl.Y
+                ZIndex: =4
+
+    Label1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =95
+        Size: =26
+        Text: ="Tambah Data"
+        Width: =275
+        X: =543
+        Y: =25
+        ZIndex: =4
+
+    btnSave As button:
+        OnSelect: =SubmitForm(Form2);Notify("Sukses",NotificationType.Success)
+        Text: ="Save"
+        Width: =207
+        X: =714
+        Y: =466
+        ZIndex: =5
+
+    btncancel As button:
+        OnSelect: =Navigate(AdmPeserta)
+        Text: ="Cancel"
+        Width: =211
+        X: =1125
+        Y: =466
+        ZIndex: =6
+

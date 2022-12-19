@@ -1,0 +1,93 @@
+leftnavadmin1 As CanvasComponent:
+    ExpandMenu: =false
+    Fill: =RGBA(0, 0, 0, 0)
+    HamburgerMenuColor: =Blue
+    Height: =640
+    MenuBagColor: =LightBlue
+    MenuItem: |-
+        =Table(
+            {
+                MenuLabel: "Home", 
+                MenuIcon: Home, 
+                MenuScreenNavigate: Homeadmin,
+                MenuID: 1
+            },
+            {
+                MenuLabel: "People", 
+                MenuIcon: People, 
+                MenuScreenNavigate: AdmPeserta,
+                MenuID: 2
+            },
+            {
+                MenuLabel: "Logout", 
+                MenuIcon: Leave, 
+                MenuScreenNavigate: Login,
+                MenuID: 3
+            }
+        )
+    OnReset: =Set(showMenu, leftnavadmin1.ExpandMenu)
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Iconhamburger As icon.Hamburger:
+        Color: =leftnavadmin1.HamburgerMenuColor
+        Height: =49
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(showMenu,!showMenu)
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Width: =59
+        X: =2
+        ZIndex: =1
+
+    galmenu As gallery.variableTemplateHeightGallery:
+        Fill: =leftnavadmin1.MenuBagColor
+        Height: =Parent.Height-Iconhamburger.Height
+        Items: =leftnavadmin1.MenuItem
+        Layout: =Layout.Vertical
+        TemplateSize: =280
+        Visible: =showMenu
+        Y: =Iconhamburger.Height
+        ZIndex: =2
+
+        recShape As rectangle:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.MenuScreenNavigate = App.ActiveScreen
+            Width: =6
+            ZIndex: =1
+
+        Icon2 As icon.Add:
+            Height: =48
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Select(Parent)
+            PaddingTop: =5
+            Width: =62
+            X: =6
+            ZIndex: =2
+
+        lblMenu As label:
+            Font: =Font.'Lato Light'
+            Height: =34
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: =ThisItem.MenuLabel
+            Width: =562
+            X: =68
+            Y: =7
+            ZIndex: =3
+
+        btnClick As button:
+            Fill: =Transparent
+            Height: =48
+            HoverBorderColor: =Transparent
+            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover)
+            PressedFill: =Transparent
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+

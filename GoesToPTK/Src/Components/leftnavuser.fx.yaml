@@ -1,0 +1,117 @@
+leftnavuser As CanvasComponent:
+    ExpandMenu: =false
+    Fill: =RGBA(0, 0, 0, 0)
+    HamburgerMenuColor: =Blue
+    Height: =640
+    MenuBagColor: =WhiteSmoke
+    MenuItem: |-
+        =Table(
+            {
+                MenuLabel: "Menu", 
+                MenuIcon: Home, 
+                MenuScreenNavigate: Menu,
+                MenuID: 1
+            },
+            {
+                MenuLabel: "Materi", 
+                MenuIcon: Notebook, 
+                MenuScreenNavigate: Materi,
+                MenuID: 2
+            },
+            {
+                MenuLabel:"Pembahasan", 
+                MenuIcon: Video, 
+                MenuScreenNavigate: VideoSoaldanPembahasan,
+                MenuID: 4
+            },
+            {
+                MenuLabel:"Soal", 
+                MenuIcon: ColorPicker, 
+                MenuScreenNavigate: SoalKedinasan,
+                MenuID: 5
+            },
+            {
+                MenuLabel:"Kedinasan", 
+                MenuIcon: Note, 
+                MenuScreenNavigate: MacamSekolahKedinasan,
+                MenuID: 6
+            },
+            {
+                MenuLabel:"Informasi", 
+                MenuIcon: Icon.Information, 
+                MenuScreenNavigate: InformasiPendaftaran,
+                MenuID: 7
+            },
+            {
+                MenuLabel: "Keluar", 
+                MenuIcon: Leave, 
+                MenuScreenNavigate: Login,
+                MenuID: 8
+            }
+        )
+    OnReset: =Set(showMenu, leftnavuser.ExpandMenu)
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Iconhamburger_1 As icon.Hamburger:
+        Color: =leftnavuser.HamburgerMenuColor
+        Height: =49
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(showMenu,!showMenu)
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Width: =59
+        X: =2
+        ZIndex: =1
+
+    galmenu_1 As gallery.variableTemplateHeightGallery:
+        Fill: =leftnavuser.MenuBagColor
+        Height: =Parent.Height-Iconhamburger_1.Height
+        Items: =leftnavuser.MenuItem
+        Layout: =Layout.Vertical
+        TemplateSize: =280
+        Visible: =showMenu
+        Y: =Iconhamburger_1.Height
+        ZIndex: =2
+
+        recShape_1 As rectangle:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.MenuScreenNavigate = App.ActiveScreen
+            Width: =6
+            ZIndex: =1
+
+        Icon2_1 As icon.Add:
+            Height: =48
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Select(Parent)
+            PaddingTop: =5
+            Width: =62
+            X: =6
+            ZIndex: =2
+
+        lblMenu_1 As label:
+            Font: =Font.'Lato Light'
+            Height: =34
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: =ThisItem.MenuLabel
+            Width: =562
+            X: =68
+            Y: =7
+            ZIndex: =3
+
+        btnClick_1 As button:
+            Fill: =Transparent
+            Height: =48
+            HoverBorderColor: =Transparent
+            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover)
+            PressedFill: =Transparent
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+

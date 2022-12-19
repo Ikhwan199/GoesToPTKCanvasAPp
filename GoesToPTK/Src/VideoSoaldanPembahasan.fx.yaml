@@ -1,0 +1,57 @@
+VideoSoaldanPembahasan As screen:
+    Fill: =RGBA(153, 207, 236, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label2_4 As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =127
+        Size: =40
+        Text: ="Soal dan Pembahasan"
+        Width: =1365
+        ZIndex: =1
+
+    MicrosoftStream5 As microsoftStreamPlayback:
+        Height: =290
+        StreamUrl: |-
+            ="https://web.microsoftstream.com/video/3a2e950e-3d7c-4db0-9d65-3795ff6a3d92"
+        Width: =486
+        X: =99
+        Y: =150
+        ZIndex: =2
+
+    MicrosoftStream5_1 As microsoftStreamPlayback:
+        Height: =295
+        StreamUrl: |-
+            ="https://web.microsoftstream.com/video/7a52beb9-9a91-4968-9d10-7e79f66b39f0"
+        Width: =497
+        X: =99
+        Y: =459
+        ZIndex: =3
+
+    MicrosoftStream1 As microsoftStreamPlayback:
+        Height: =295
+        StreamUrl: |-
+            ="https://web.microsoftstream.com/video/35a057b1-da5c-4ab7-a68d-12f5d551e42d"
+        Width: =559
+        X: =691
+        Y: =145
+        ZIndex: =4
+
+    MicrosoftStream1_1 As microsoftStreamPlayback:
+        Height: =295
+        StreamUrl: |-
+            ="https://web.microsoftstream.com/video/abacc7fb-84e7-4644-ab8a-78a403f30521"
+        Width: =559
+        X: =691
+        Y: =459
+        ZIndex: =5
+
+    leftnavuser_3 As leftnavuser:
+        Height: =682
+        Width: =172
+        Y: =82
+        ZIndex: =6
+

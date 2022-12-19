@@ -1,0 +1,140 @@
+Menu As screen:
+    Fill: =RGBA(153, 207, 236, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Image2 As image:
+        Height: =308
+        Image: ='book-stack'
+        Width: =262
+        X: =87
+        Y: =246
+        ZIndex: =1
+
+    Image4 As image:
+        Height: =168
+        Image: =register_1
+        Width: =229
+        X: =434
+        Y: =470
+        ZIndex: =3
+
+    Button2 As button:
+        Height: =82
+        OnSelect: =Navigate(Materi,Fade)
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =20
+        Text: ="Materi "
+        Width: =210
+        X: =113
+        Y: =577
+        ZIndex: =4
+
+    Button2_1 As button:
+        Height: =63
+        OnSelect: =Navigate(SoalKedinasan,Fade)
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =16
+        Text: ="Soal-soal"
+        Width: =164
+        X: =473
+        Y: =354
+        ZIndex: =8
+
+    Image7 As image:
+        Height: =131
+        Image: =notes
+        ImagePosition: =ImagePosition.Stretch
+        Width: =232
+        X: =434
+        Y: =202
+        ZIndex: =10
+
+    Label2_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =117
+        Size: =40
+        Text: ="MENU"
+        Width: =1365
+        ZIndex: =12
+
+    Button2_4 As button:
+        Height: =62
+        OnSelect: =Navigate(InformasiPendaftaran,Fade)
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =16
+        Text: ="Informasi Pendaftaran"
+        Width: =182
+        X: =455
+        Y: =682
+        ZIndex: =15
+
+    Image6 As image:
+        Height: =117
+        Image: =facebook
+        ImagePosition: =ImagePosition.Fill
+        Width: =208
+        X: =777
+        Y: =527
+        ZIndex: =16
+
+    Button2_2 As button:
+        Height: =71
+        OnSelect: =Navigate(VideoSoaldanPembahasan,Fade)
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =16
+        Text: ="Video soal dan pembahasan"
+        Width: =193
+        X: =784
+        Y: =682
+        ZIndex: =17
+
+    Image8 As image:
+        Height: =146
+        Image: ='school (1)'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =248
+        X: =777
+        Y: =184
+        ZIndex: =18
+
+    Button2_3 As button:
+        Height: =75
+        OnSelect: =Navigate(MacamSekolahKedinasan,Fade)
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Text: ="Macam-macam Sekolah Kedinasan"
+        Width: =204
+        X: =797
+        Y: =352
+        ZIndex: =19
+
+    Image10_1 As image:
+        Height: =598
+        Image: ='SEKOLAH DINAS1'
+        Width: =381
+        X: =985
+        Y: =170
+        ZIndex: =20
+
+    leftnavuser_1 As leftnavuser:
+        Height: =768
+        Width: =262
+        ZIndex: =21
+

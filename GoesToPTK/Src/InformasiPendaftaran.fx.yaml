@@ -1,0 +1,82 @@
+InformasiPendaftaran As screen:
+    BackgroundImage: =
+    Fill: =RGBA(204, 231, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    ImagePosition: =ImagePosition.Fill
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label6 As label:
+        Align: =Align.Center
+        Fill: =RGBA(102, 182, 227, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =174
+        Size: =25
+        Text: ="INFORMASI PENDAFTARAN "
+        Width: =1366
+        ZIndex: =1
+
+    Button4 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =180
+        OnSelect: |-
+            =Launch("https://dikdin.bkn.go.id/")
+        Size: =28
+        Text: ="Pendaftaran"
+        Width: =246
+        X: =44
+        Y: =232
+        ZIndex: =6
+
+    Button4_5 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =180
+        OnSelect: |-
+            =Launch("https://dikdin.bkn.go.id/alurInstansi")
+        Size: =28
+        Text: ="Alur Pendaftaran"
+        Width: =266
+        X: =362
+        Y: =232
+        ZIndex: =8
+
+    Button5 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =164
+        OnSelect: |-
+            =Launch("https://dikdin.bkn.go.id/pembayaran")
+        Size: =28
+        Text: ="Pembayaran"
+        Width: =263
+        X: =44
+        Y: =510
+        ZIndex: =12
+
+    Button6 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =156
+        OnSelect: |-
+            =Launch("https://dikdin.bkn.go.id/faq")
+        Size: =30
+        Text: ="FAQ"
+        Width: =259
+        X: =362
+        Y: =510
+        ZIndex: =13
+
+    Image5 As image:
+        Height: =570
+        Image: =skdin
+        Width: =609
+        X: =677
+        Y: =145
+        ZIndex: =14
+
+    leftnavuser_6 As leftnavuser:
+        Width: =290
+        Y: =128
+        ZIndex: =15
+

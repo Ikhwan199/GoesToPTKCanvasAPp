@@ -1,0 +1,215 @@
+MacamSekolahKedinasan As screen:
+    Fill: =RGBA(153, 207, 236, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Label2_3 As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =117
+        Size: =40
+        Text: ="SEKOLAH KEDINASAN"
+        Width: =1365
+        ZIndex: =1
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =444
+        Width: =547
+        X: =15
+        Y: =218
+        ZIndex: =2
+
+    Label13 As label:
+        Color: =RGBA(0, 134, 208, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Arial
+        Height: =329
+        Size: =20
+        Text: |-
+            ="Sekolah Kedinasan merupakan perguruan tinggi yang dikelola oleh instansi pemerintah. Para lulusan nantinya akan ditempatkan menjadi Calon Pegawai Negeri Sipil (CPNS).
+            
+            Karena itu, Sekolah Kedinasan menjadi salah satu pilihan para lulusan SMA/sederajat untuk melanjutkan pendidikan."
+        Width: =547
+        X: =15
+        Y: =314
+        ZIndex: =3
+
+    Rectangle3 As rectangle:
+        Height: =57
+        Width: =547
+        X: =15
+        Y: =218
+        ZIndex: =4
+
+    Label12 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Patrick Hand'
+        FontWeight: =FontWeight.Bold
+        Height: =57
+        Size: =40
+        Text: ="Sekolah Kedinasan"
+        Width: =547
+        X: =15
+        Y: =218
+        ZIndex: =5
+
+    Button2_5 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="Macam-macam Sekolah Kedinasan"
+        Width: =746
+        X: =594
+        Y: =206
+        ZIndex: =6
+
+    Button2_6 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://spmb.pknstan.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="PKN STAN"
+        Width: =303
+        X: =594
+        Y: =314
+        ZIndex: =7
+
+    Button2_7 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://poltekssn.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="Politeknik SSN"
+        Width: =303
+        X: =1037
+        Y: =314
+        ZIndex: =8
+
+    Button2_8 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: =Launch("www.stin.ac.id")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="STIN"
+        Width: =303
+        X: =594
+        Y: =405
+        ZIndex: =9
+
+    Button2_9 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://stis.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="STIS"
+        Width: =303
+        X: =1037
+        Y: =405
+        ZIndex: =10
+
+    Button2_10 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://ipdn.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="IPDN"
+        Width: =303
+        X: =594
+        Y: =500
+        ZIndex: =11
+
+    Button2_11 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://stmkg.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="STMKG"
+        Width: =303
+        X: =1037
+        Y: =500
+        ZIndex: =12
+
+    Button2_12 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://www.poltekip.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="POLTEKIP"
+        Width: =303
+        X: =594
+        Y: =593
+        ZIndex: =13
+
+    Button2_13 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Patrick Hand'
+        Height: =69
+        OnSelect: |-
+            =Launch("https://poltekim.ac.id/")
+        RadiusBottomLeft: =27
+        RadiusBottomRight: =27
+        RadiusTopLeft: =27
+        RadiusTopRight: =27
+        Size: =40
+        Text: ="POLTEKIM"
+        Width: =303
+        X: =1037
+        Y: =593
+        ZIndex: =14
+
+    leftnavuser_5 As leftnavuser:
+        Height: =696
+        Width: =252
+        Y: =72
+        ZIndex: =15
+

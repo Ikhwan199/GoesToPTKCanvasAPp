@@ -1,0 +1,154 @@
+Homeadmin As screen:
+    BackgroundImage: =
+    Fill: =RGBA(204, 231, 246, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    ImagePosition: =ImagePosition.Stretch
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Image10_2 As image:
+        Height: =549
+        Image: ='SEKOLAH DINAS1'
+        Width: =552
+        X: =813
+        Y: =117
+        ZIndex: =1
+
+    bardashboard As label:
+        Align: =Align.Center
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =117
+        Size: =40
+        Text: ="DASHBOARD"
+        Width: =1365
+        ZIndex: =2
+
+    rcTambahPeserta As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =142
+        Width: =1073
+        X: =252
+        Y: =408
+        ZIndex: =3
+
+    lblTambahPeserta As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Tambah Peserta"
+        Width: =200
+        X: =265
+        Y: =416
+        ZIndex: =4
+
+    lblDesTambahPeserta As label:
+        Height: =45
+        Text: ="Untuk menambah peserta atau membuat akun admin baru yang dibuat"
+        Width: =788
+        X: =265
+        Y: =456
+        ZIndex: =5
+
+    btn_login_1 As button:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(AdmPeserta)
+        Text: ="+ Tambah Data"
+        Width: =178
+        X: =276
+        Y: =501
+        ZIndex: =6
+
+    leftnavadmin1_1 As leftnavadmin1:
+        Height: =698
+        Width: =252
+        Y: =70
+        ZIndex: =7
+
+    rcCekNilai As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =142
+        Width: =1073
+        X: =252
+        Y: =593
+        ZIndex: =10
+
+    lblCekNilai As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Cek Kemampuan Peserta"
+        Width: =287
+        X: =265
+        Y: =593
+        ZIndex: =11
+
+    lblDesCekNilai As label:
+        Height: =45
+        Text: ="Untuk melihat kemampuan masing-masing peserta yang mengerjakan soal"
+        Width: =788
+        X: =265
+        Y: =633
+        ZIndex: =12
+
+    btn_nilai As button:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Launch("https://forms.office.com/Pages/AnalysisPage.aspx?AnalyzerToken=Cht2sWtJYBPO5UMSXY8PlYKA9ta58V6n&id=xF6513-aYEKy4-tT8KyEAZKjtywSMbVHqb5c61Im7yJUNkFaSzNaQk41TzNZMzhHN0Y1TVRUWEZZTy4u")
+        Text: ="Cek Nilai TWK"
+        Width: =178
+        X: =276
+        Y: =678
+        ZIndex: =13
+
+    CompositePieChart2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Title2 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =19
+            Size: =20
+            Text: ="Data Peserta"
+            Width: =441
+            X: =436
+            Y: =132
+            ZIndex: =8
+
+        PieChart2 As pieChart:
+            Height: =287
+            Items: =user_logins
+            Width: =441
+            X: =436
+            Y: =153
+            ZIndex: =9
+
+    btn_nilai_1 As button:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Launch("https://forms.office.com/Pages/AnalysisPage.aspx?AnalyzerToken=peEm4NUsE9vMeMm8CURijTsYG0oSouYi&id=xF6513-aYEKy4-tT8KyEAZKjtywSMbVHqb5c61Im7yJUNENERzBMRDg4SU80MkdSQ1BBUlFSU1RZVy4u")
+        Text: ="Cek Nilai TKP"
+        Width: =178
+        X: =493
+        Y: =683
+        ZIndex: =14
+
+    btn_nilai_2 As button:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Color: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Launch("https://forms.office.com/Pages/AnalysisPage.aspx?AnalyzerToken=ejDdOsurl1L7pZW3AD1s0nOesyfe4LHy&id=xF6513-aYEKy4-tT8KyEAZKjtywSMbVHqb5c61Im7yJURFoxQTU1MUVQMjRFMTIxSEUwWU1KSzMzTy4u")
+        Text: ="Cek Nilai TIU"
+        Width: =178
+        X: =718
+        Y: =683
+        ZIndex: =15
+

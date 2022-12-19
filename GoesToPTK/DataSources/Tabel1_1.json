@@ -1,0 +1,19 @@
+[
+  {
+    "Data": "[{\"Informasi\":\"Pendaftaran\",\"Link\":\"https://dikdin-daftar.bkn.go.id/\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\SSCASN.BKN.go.id%20Sekolah%20kedinasan.png\",\"Picture@display\":\"file:///C:/Users/User/Downloads/SSCASN.BKN.go.id%20Sekolah%20kedinasan.png\"},{\"Informasi\":\"Alur\",\"Link\":\"https://dikdin.bkn.go.id/alurInstansi\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\Alur_All-min.png\",\"Picture@display\":\"file:///C:/Users/User/Downloads/Alur_All-min.png\"},{\"Informasi\":\"Daftar Instansi\",\"Link\":\"https://dikdin.bkn.go.id/daftarInstansi\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\instansi.png\",\"Picture@display\":\"file:///C:/Users/User/Downloads/instansi.png\"},{\"Informasi\":\"Daftar Formasi\",\"Link\":\"https://dikdin-daftar.bkn.go.id/spf\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\instansi.png\",\"Picture@display\":\"file:///C:/Users/User/Downloads/instansi.png\"},{\"Informasi\":\"Cara Pembayaran\",\"Link\":\"https://dikdin.bkn.go.id/pembayaran\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\Cara%20Pembayaran%20Biaya%20CAT%20SKD%20Dikdin.jpg\",\"Picture@display\":\"file:///C:/Users/User/Downloads/Cara%20Pembayaran%20Biaya%20CAT%20SKD%20Dikdin.jpg\"},{\"Informasi\":\"Helpdesk\",\"Link\":\"https://helpdesk-sscasn.bkn.go.id/dikdin/home\",\"Picture\":\"file://C:\\\\Users\\\\User\\\\Downloads\\\\faq.png\",\"Picture@display\":\"file:///C:/Users/User/Downloads/faq.png\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Tabel1_1",
+    "OrderedColumnNames": [
+      "Informasi",
+      "Link",
+      "Picture",
+      "Picture@display"
+    ],
+    "OriginalName": "Tabel1",
+    "OriginalSchema": "*[Informasi:s, Link:h, Picture:i, 'Picture@display':s]",
+    "Schema": "*[Informasi:s, Link:h, Picture:i, 'Picture@display':s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
