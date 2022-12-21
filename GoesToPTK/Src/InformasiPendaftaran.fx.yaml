@@ -24,8 +24,8 @@ InformasiPendaftaran As screen:
         Size: =28
         Text: ="Pendaftaran"
         Width: =246
-        X: =44
-        Y: =232
+        X: =152
+        Y: =240
         ZIndex: =6
 
     Button4_5 As button:
@@ -37,8 +37,8 @@ InformasiPendaftaran As screen:
         Size: =28
         Text: ="Alur Pendaftaran"
         Width: =266
-        X: =362
-        Y: =232
+        X: =470
+        Y: =240
         ZIndex: =8
 
     Button5 As button:
@@ -50,8 +50,8 @@ InformasiPendaftaran As screen:
         Size: =28
         Text: ="Pembayaran"
         Width: =263
-        X: =44
-        Y: =510
+        X: =152
+        Y: =518
         ZIndex: =12
 
     Button6 As button:
@@ -63,16 +63,16 @@ InformasiPendaftaran As screen:
         Size: =30
         Text: ="FAQ"
         Width: =259
-        X: =362
-        Y: =510
+        X: =470
+        Y: =518
         ZIndex: =13
 
     Image5 As image:
         Height: =570
         Image: =skdin
-        Width: =609
-        X: =677
-        Y: =145
+        Width: =569
+        X: =797
+        Y: =163
         ZIndex: =14
 
     leftnavuser_6 As leftnavuser:
